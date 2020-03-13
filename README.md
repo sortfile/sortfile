@@ -1,6 +1,6 @@
 # What are .sortfiles?
 
-a .sortfile is a file format that tells a file manager how to sort the files.
+a .sortfile is a file format that tells a file manager how to sort files and directories.
 
 # Schema (still being developed)
 
@@ -27,17 +27,20 @@ sort_order = by_type
 
 [sort]
 README.md
+LICENSE
 
-# one filename per line, \ is the only escape character.
-# \ escapes a #(comment) or a \n(for filenames with newlines) or \\(or with a slash), or \[ (files starting with '[' )
+#i.e. README appears before the LICENSE.
+
+# one filename/dirname (name) per line, \ is the only escape character.
+# \ escapes a #(comment) or a \n(for names with newlines) or \\(or with a slash), or \[ (names starting with '[' )
 # also escape a newline by a backslash at the end.
 
-# trivia: to encode a filename made solely of whitespaces, escape the first whitespace with a \
+# trivia: to encode a name made solely of whitespaces, escape the first whitespace with a \
 # to encode a # or \ or [, or a newline, escape it with \
 
-\\file starting with a backslash
-\ file starting with a whitespace
-\# file starting with a comment
+\\name starting with a backslash
+\ name starting with a whitespace
+\# name starting with a comment
 
 file\
 with\
