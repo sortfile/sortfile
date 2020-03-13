@@ -2,7 +2,7 @@
 
 a .sortfile is a file format that tells a file manager how to sort files and directories.
 
-# Schema (still being developed)
+# Format (still being developed)
 
 ```
 #comments and blank lines are ignored
@@ -31,8 +31,10 @@ LICENSE
 
 #i.e. README appears before the LICENSE.
 
+#paths are relative to `root` variable in [metadata]
+
 # one filename/dirname (name) per line, \ is the only escape character.
-# \ escapes a #(comment) or a \n(for names with newlines) or \\(or with a slash), or \[ (names starting with '[' )
+# \ escapes a #(comment) or a \n(for names withhttps://stackoverflow.com/questions/47763198/difference-between-using-s-and-an-actual-space-in-regex newlines) or \\(or with a slash), or \[ (names starting with '[' )
 # also escape a newline by a backslash at the end.
 
 # trivia: to encode a name made solely of whitespaces, escape the first whitespace with a \
@@ -49,3 +51,6 @@ newlines\n and \
 
 subdirs/are/sorted
 ```
+# .sortfile search path
+
+a file manager plugin searchs the current directory and all parent directories for a .sortfile.
