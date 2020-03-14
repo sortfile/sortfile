@@ -34,15 +34,15 @@ LICENSE
 #paths are relative to `root` variable in [metadata]
 
 # one filename/dirname (name) per line, \ is the only escape character.
-# \ escapes a #(comment) or a \n(for names with newlines) or \\(or with a slash), or \[ (names starting with '[' )
+# to encode a # or \ or [, or a newline, escape it with \ (or use \n)
+# \ escapes a # or a \n(for names with newlines) or \\(or with a slash), or \[ (names starting with '[' )
 # also escape a newline by a backslash at the end.
 
 # trivia: to encode a name made solely of whitespaces, escape the first whitespace with a \
-# to encode a # or \ or [, or a newline, escape it with \
 
 \\name starting with a backslash
 \ name starting with a whitespace
-\# name starting with a comment
+\# name starting with a hashtag
 
 file\
 with\
